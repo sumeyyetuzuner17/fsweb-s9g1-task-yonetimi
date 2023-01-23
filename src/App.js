@@ -5,7 +5,8 @@ import TaskForm from "./TaskForm";
 import TaskHookForm from "./TaskHookForm";
 import PeopleForm from "./PeopleForm";
 import { initialTasks, initialTeam } from "./data";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
@@ -24,6 +25,7 @@ function App() {
   }
 
   return (
+    <>
     <div className="app">
       <div className="formColumn">
         <div className="form-container">
@@ -61,6 +63,19 @@ function App() {
       </div>
 
     </div>
+    <ToastContainer
+	position="top-right"
+	autoClose={5000}
+	hideProgressBar={false}
+	newestOnTop={false}
+	closeOnClick
+	rtl={false}
+	pauseOnFocusLoss
+	draggable
+	pauseOnHover
+	theme="light"
+/>
+ </>
   );
 }
 
